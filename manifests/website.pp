@@ -1,13 +1,12 @@
 class profiles::website ( 
-	$webname=hiera('profile::website::name'),
-	$port=hiera('profile::website::port'),
-	$docroot=hiera('profile::website::docroot'),
-	$htmlname=hiera('profile::website::htmlname'),
+	$websites=hiera('websites'),
     ) {
 
-websites::vhost { "$webname":
- port => $port,
- docroot => $docroot,
- htmlname => $htmlname,
+$websites.each | $wsite | {
+
+notify { "$wsite":
+
+  message => "$wsite[port]",
+  }
  }
 }
