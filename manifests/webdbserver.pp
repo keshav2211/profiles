@@ -1,9 +1,9 @@
-class profiles::webdbserver ($mysqlpwd=hiera('webdbserver::mysqlpwd') {
+class profiles::webdbserver ($mysqlpwd=hiera('webdbserver::mysqlpwd')) {
 
 include ::apache
 
 class { '::mysql::server':
-  root_password => $mysqlpwd,
+  root_password => "$mysqlpwd",
 }
 
 }
