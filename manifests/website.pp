@@ -1,4 +1,4 @@
-class profile::website ( 
+class profiles::website ( 
 	$webname=hiera('profile::website::name'),
 	$port=hiera('profile::website::port'),
 	$docroot=hiera('profile::website::docroot'),
