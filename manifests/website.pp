@@ -10,3 +10,4 @@ websites::vhost { "$name":
  docroot => $docroot,
  htmlname => $htmlname,
  }
+}
