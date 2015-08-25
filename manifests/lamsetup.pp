@@ -1,4 +1,4 @@
-class profiles::webdbserver ($mysqlpwd=hiera('webdbserver::mysqlpwd')) {
+class profiles::lamsetup ($mysqlpwd=hiera('profiles::lamsetup::mysqlpwd')) {
 
 include ::apache
 
