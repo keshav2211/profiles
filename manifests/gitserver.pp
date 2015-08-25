@@ -1,6 +1,7 @@
-class profiles::gitserver {
+class profiles::gitserver ( $reponames=hiera('profiles::gitserver::reponames') ) {
 
 include ::gitk
-gitk::gitrepo { hiera('gitreponames') : }
+gitk::gitrepo { $reponames : }
 
 }
+
