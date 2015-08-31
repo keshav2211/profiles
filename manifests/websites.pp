@@ -1,4 +1,6 @@
-class profiles::websites ( $websites=hiera('profiles::websites::websites') ) {
+class profiles::websites {
+
+$websites=hiera('profiles::websites::websites') 
 
 $websites.each | $website | {
 

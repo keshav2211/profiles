@@ -1,4 +1,7 @@
-class profiles::databases ( $databases=hiera('profiles::databases::databases') ) {
+class profiles::databases {
+
+#data lookups
+$databases=hiera('profiles::databases::databases')
 
 $databases.each | $database | {
 

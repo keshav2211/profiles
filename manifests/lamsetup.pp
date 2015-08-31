@@ -1,4 +1,6 @@
-class profiles::lamsetup ($mysqlpwd=hiera('profiles::lamsetup::mysqlpwd')) {
+class profiles::lamsetup {
+
+$mysqlpwd=hiera('profiles::lamsetup::mysqlpwd')
 
 include ::apache
 
